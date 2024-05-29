@@ -33,3 +33,37 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.container {
+  width: 100%;
+  max-width: 365px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 734px;
+    padding-inline: 15px;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 100%;
+    max-width: 1210px;
+    padding-inline: 15px;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 1370px;
+    padding-inline: 15px;
+    margin-inline: auto;
+  }
+}
