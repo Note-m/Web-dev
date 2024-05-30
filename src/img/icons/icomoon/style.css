@@ -1,0 +1,44 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-benefits-art {
+  width: 0.9560546875em;
+}
+
+.icon-benefits-communication {
+  width: 1.0458984375em;
+}
+
+.icon-benefits-urgent {
+  width: 0.7275390625em;
+}
+
+.icon-FAQ-vector-down {
+  width: 1.5556640625em;
+}
+
+.icon-FAQ-vector-up {
+  width: 1.5556640625em;
+}
+
+.icon-hero-arrow {
+  width: 1.875em;
+}
+
+.icon-lets-email {
+  width: 1.375em;
+}
