@@ -1,0 +1,79 @@
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+
+.reviews-title{
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.user-review{
+  padding: 32px;
+  background-color: #E4E5E6;
+  border-radius: 16px;
+}
+.text-review{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+    margin-bottom: 24px;
+}
+.user-name-review{
+   font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+.reviews-title {
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+}
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+  .is-hidden {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  .reviews-list{
+    display: flex;
+    gap: 32px;
+  }
+.reviews-title {
+  margin-bottom: 80px;
+}
+}
