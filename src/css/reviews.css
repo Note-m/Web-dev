@@ -41,7 +41,10 @@
     color: #292929;
 }
 
-
+.icon-photo-name{
+  display: flex;
+  gap: 16px;
+}
 
 
 
