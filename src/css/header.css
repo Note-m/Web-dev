@@ -52,6 +52,21 @@ color: var(--black);
     margin: 0;
 }
 .header-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+}
+.hamburger {
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
 }
 .menu-toggle {
 }
@@ -61,6 +76,26 @@ color: var(--black);
     fill: var(--black);
 }
 .menu-container {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: url("img_hero_decor-hero-modal-up-mob-1x.png") no-repeat fixed top right;;
+  top: 50px;
+  left: 0;
+  z-index: 999;
+  padding-top: 124px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+  pointer-events: auto;
+  visibility: visible;
 }
 .js-menu-container {
 }
