@@ -1,0 +1,102 @@
+.my-projects-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23077;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.my-projects-item {
+  margin-bottom: 40px;
+}
+
+.my-projects-title span {
+  color: #00b068;
+}
+
+.my-projects-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+.my-projects-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+.my-projects-btn-visit {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 125px;
+  height: 48px;
+  background: #e4e5e6;
+  display: block;
+  margin-left: auto;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.my-projects-btn-visit:hover,
+.my-projects-btn-visit:focus {
+  background: #bbb;
+}
+
+.my-projects-btn-load-more {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55556;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+  background: none;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.my-projects-btn-load-more:hover,
+.my-projects-btn-load-more:focus {
+  color: #00b068;
+}
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 2px;
+  background: #00b068;
+  width: 100%;
+}
