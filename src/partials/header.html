@@ -1,7 +1,43 @@
-<header class="header">
-  <div class="container">
+<header id="header" class="header">
+  <div class="container header-container">
     <a class="link-logo header-link-logo" href="./index.html"
-      >LloydJefferson.</a
+      >Lloyd<span class="header-link-logo-text">Jefferson.</span></a
     >
+    <!-- Navigation menu -->
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="#about">About me</a>
+        </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Hamburger button -->
+    <div class="button-container">
+      <button class="header-button menu-toggle js-open-menu"  type="button" aria-expanded="false" aria-controls="mobile menu" >
+      <svg class="header-button-icon" width="32" height="32">
+        <!-- ADD ICON!!! -->
+        <use href="./img/"></use>
+      </svg>
+    </button></div>
+    <!-- MOB menu -->
+    <div  class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="mob-menu-list">
+        <li class="mob-menu-item">
+          <a class="mob-menu-link" href="#about">About me</a>
+        </li>
+        <li class="mob-menu-item">
+          <a class="mob-menu-link" href="#projects">Projects</a>
+        </li>
+        <li class="mob-menu-item">
+          <a class="mob-menu-link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
