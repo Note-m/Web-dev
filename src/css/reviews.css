@@ -3,10 +3,10 @@
   visibility: hidden;
   pointer-events: none;
 }
-.swiper {
+/* .swiper {
   width: 600px;
   height: 300px;
-}
+} */
 
 
 .reviews-title{
@@ -38,12 +38,19 @@
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: #292929;  
 }
 
 .icon-photo-name{
   display: flex;
   gap: 16px;
+  align-items: center;
+}
+
+.swipe-btn{
+  border: 1px solid #292929;
+  width: 40px;
+  height: 40px;
 }
 
 
