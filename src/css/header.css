@@ -84,7 +84,7 @@ color: var(--black);
   visibility: hidden;
   width: 100%;
   height: 100%;
-  background: url("img_hero_decor-hero-modal-up-mob-1x.png") no-repeat fixed top right;;
+  background: url("/src/img/hero/decor-hero-modal-up-mob-1x.png") no-repeat fixed top right;;
   top: 50px;
   left: 0;
   z-index: 999;
