@@ -38,11 +38,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  /* --poppins: 'Poppins', sans-serif;
+  --poppins: 'Poppins', sans-serif;
   --impact: 'Impact', sans-serif;
   --montserrat: 'Montserrat', sans-serif;
 
   --main-green-color: #00b068;
   --main-black-color: #292929;
-  --light-green-color: #bcdfd1; */
+  --light-green-color: #bcdfd1;
 }
