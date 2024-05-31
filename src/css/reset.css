@@ -36,9 +36,13 @@ img {
 
 .container {
   width: 100%;
-  max-width: 365px;
-  padding-inline: 15px;
+  max-width: 360px;
+  padding-inline: 20px;
   margin-inline: auto;
+}
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -48,22 +52,21 @@ img {
     padding-inline: 15px;
     margin-inline: auto;
   }
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     width: 100%;
-    max-width: 1210px;
+    max-width: 1246px;
     padding-inline: 15px;
     margin-inline: auto;
   }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 100%;
-    max-width: 1370px;
-    padding-inline: 15px;
-    margin-inline: auto;
+  .section {
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 }
