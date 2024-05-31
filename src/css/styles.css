@@ -16,8 +16,15 @@
 @import url('./work-together.css');
 @import url('./footer.css');
 
+@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  font-family: Poppins, Impact, Montserrat, sans-serif;
+  font-family: 'Poppins', 'Impact', 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -30,4 +37,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --poppins: 'Poppins', sans-serif;
+  --impact: 'Impact', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+
+  --main-green-color: #00b068;
+  --main-black-color: #292929;
+  --light-green-color: #bcdfd1;
 }
