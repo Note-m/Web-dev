@@ -1,0 +1,71 @@
+:root {
+	--black: #292929;
+	--accet-green: #00b068;
+	--white: #f0f0f0;
+	--light-grey: #e4e5e6;
+	--light-accent: #bcdfd1;
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Impact", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+}
+.header-container {
+    padding: 36px 20px;
+    max-width: 360px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+    /* position: absolute; */
+}
+.link-logo {
+}
+.header-link-logo {
+margin: 0 auto;
+width: 180px;
+height: 24px;
+font-family: var(--second-family);
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(--black);
+}
+.header-link-logo-text {
+    color: var(--accet-green);
+}
+.header-nav {
+    display: none;
+}
+.header-nav-list {
+}
+.header-nav-item {
+}
+.header-nav-link {
+}
+.button-container {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+}
+.header-button {
+}
+.menu-toggle {
+}
+.js-open-menu {
+}
+.header-button-icon {
+}
+.menu-container {
+}
+.js-menu-container {
+}
+.mob-menu-list {
+}
+.mob-menu-item {
+}
+.mob-menu-link {
+}
