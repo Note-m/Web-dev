@@ -15,24 +15,8 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icon-benefits-art {
-  width: 0.9560546875em;
-}
-
-.icon-benefits-communication {
-  width: 1.0458984375em;
-}
-
-.icon-benefits-urgent {
-  width: 0.7275390625em;
-}
-
-.icon-FAQ-vector-down {
-  width: 1.5556640625em;
-}
-
-.icon-FAQ-vector-up {
-  width: 1.5556640625em;
+.icon-tech-skills-dot {
+  width: 0.9619140625em;
 }
 
 .icon-hero-arrow {
@@ -41,4 +25,12 @@ Single-colored icons can be modified like so:
 
 .icon-lets-email {
   width: 1.375em;
+}
+
+.icon-FAQ-arrow-down {
+  width: 1.5556640625em;
+}
+
+.icon-FAQ-arrow-up {
+  width: 1.5556640625em;
 }
