@@ -1,0 +1,68 @@
+:root {
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Impact", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+    --fs-title-mob: 52px;
+    --flh-title-mob: 64px;
+    --fls-tittle-mob: 1.8px;
+
+	--black: #292929;
+	--accet-green: #00b068;
+	--white: #f0f0f0;
+	--light-grey: #e4e5e6;
+	--light-accent: #bcdfd1;
+
+    --color-black: #292929;
+    --color-green: #00B068;
+    --color-light-grey:#F0F0F0;
+    --color-dark-grey:#E4E5E6;
+    --color-light-blue:#BCDFD1;
+}
+
+.section-footer {
+    padding-top: 80px;
+    padding-bottom: 24px;
+}
+
+.footer-logo {
+    margin-bottom: 32px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.footer-log-green {
+    color: var(--accet-green);
+}
+
+.footer-list-socials {
+    margin-bottom: 40px;
+
+}
+
+.footer-item-social {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+}
+
+.footer-item-social:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.footer-text-cpoyright {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--black);
+}
