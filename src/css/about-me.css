@@ -1,123 +1,67 @@
-
-
-  .section-about-me {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 320px;
-      min-height: 696px;
-      margin-top: 80px;
-      margin-bottom: 80px;
-      margin-right: 20px;
-      margin-left: 20px;
-
-  }
-
-  .about-me-title {
-    font-style: Impact;
-    font-weight: 400;
-      font-size: 52px;
-      line-height: 64px;
-      letter-spacing: 1.8px;
-      margin: 20px 0;
-      text-align: left;
-  }
-
-  .about-me-title .about {
-      color: #292929;
-  }
-
-  .about-me-title .me {
-      color: #00B068;
-  }
-
-  .bio,
-  .education,
-  .role {
-      width: 100%;
-      margin-bottom: 32px;
-  }
-
-  .bio p,
-  .education ul,
-  .role ul {
-      margin: 0 0 24px 0;
-  }
-
-  .photo {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-  }
-
-  .photo img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-  }
-
-  h3 {
-      font-size: 24px;
-      margin-top: 40px;
-      margin-bottom: 32px;
-  }
-
-  ul {
-      list-style-type: none;
-      padding: 0;
-  }
-
-  ul li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-  }
-
-  ul li::before {
-      content: '•';
-      color: #00B068;
-      position: absolute;
-      left: 0;
-      top: 0;
-  }
-
-
-  @media screen and (min-width: 768px) {
-    .section-about-me {
-        max-width: 768px;
-        padding-top: 124px;
-        padding-bottom: 124px;
-    }
-    h3 {
-        width: 336px;
-        gap: 32px;
-        
-    }
-
-        
-        .education-container {
-            display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-              width: 100%;
-        }
-        .description-container {
-        display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-        }
-  }
-
-
-  @media screen and (min-width: 1280px) {
-     
-    .section-about-me {
-            max-width: 1280px;
-            padding-top: 164px;
-            padding-bottom: 164px;
-        }
+.container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.title {
+    margin: 0;
+    font-size: 24px;
+}
+.about {
+    color: #292929;
     
-        
-  }
+}
+
+.me {
+    color: #00B068;
+    
+}
+
+.bio-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.bio-section img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bio {
+    text-align: left;
+}
+
+.bio-title {
+    margin-top: 20px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.bio-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    
+}
+
+.bio-title+.bio-text {
+    margin-top: 32px;
+    
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .bio-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .bio-text {
+        max-width: 336px;
+    }
+        }
