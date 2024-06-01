@@ -1,0 +1,113 @@
+.about-me-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.about-me-title {
+    
+    margin: 0;
+    
+    width: 217px;
+    height: 64px;
+   margin-left: 20px;
+    
+}
+.about-me-img {
+    width: 320px;
+    height: 374px;
+    border-radius: 16px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+.about {
+    color: #292929;
+    
+}
+
+.me {
+    color: #00B068;
+    
+}
+
+.bio-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.bio-section img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bio {
+    text-align: left;
+}
+
+.bio-title {
+    
+    
+    font-size: 18px;
+    display: inline-block;
+}
+
+.bio-text {
+    font-size: 14px;
+    line-height: 1.6;
+    
+    width: 320px;
+    
+}
+
+.bio-title+.bio-text {
+    margin-top: 32px;
+    
+}
+.bio p {
+    margin-bottom: 24px;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+    
+}
+
+@media (min-width: 768px) {
+    .about-me-container {
+        max-width: 768px;
+        position: relative;
+    }
+
+        
+
+    .bio-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .bio-text {
+        max-width: 336px;
+    }
+        }
+
+                @media (min-width: 768px) {
+                    
+                    .bio {
+                        background-image: url(../img/about-me/decor-about-me-tab-1x.png);
+                        background-size: ;
+                    }
+                    .about-me-img {
+                        width: 336px;
+                        height: 392px;
+                        margin-top: 408px;
+                    }
+                }
+                 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+                        (min-width: 768px) and (min-resolution: 192dpi) {
+                        .bio {
+                         background-image: url(../img/about-me/decor-about-me-tab-2x.png);
+                                    }
+                                }
