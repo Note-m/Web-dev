@@ -54,6 +54,12 @@
 
 }
 
+.btns-arrow {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}
+
 .swiper-button{
   border: 1px solid rgba(41, 41, 41, 0.3);
   border-radius: 8px;
@@ -75,6 +81,14 @@
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px) {
 .reviews-title {

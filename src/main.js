@@ -3,7 +3,6 @@ import 'swiper/css';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-
 const BASE_URL = "https://portfolio-js.b.goit.study/api"
 
 const prevBtn= document.querySelector(".btn-prev")
@@ -65,37 +64,37 @@ async function renderReviews() {
   }
 }
 
-const initSwiper = () => {
-  const swiper = new Swiper('.swiper', {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-    speed: 400,
-    spaceBetween: 100,
-    slidesPerView: 'auto',
-    loop: false,
-    allowTouchMove: true,
-    keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-    },
-    on: {
-      reachEnd: () => {
-        nextBtn.classList.add('disabled');
-      },
-      reachBeginning: () => {
-        prevBtn.classList.add('disabled');
-      },
-      fromEdge: () => {
-        nextBtn.classList.remove('disabled');
-        prevBtn.classList.remove('disabled');
-      }
-    },
-});
-}
+// const initSwiper = () => {
+//   const swiper = new Swiper('.swiper', {
+//   navigation: {
+//     nextEl: '.btn-next',
+//     prevEl: '.btn-prev',
+//   },
+//     speed: 400,
+//     spaceBetween: 100,
+//     slidesPerView: 'auto',
+//     loop: false,
+//     allowTouchMove: true,
+//     keyboard: {
+//     enabled: true,
+//     onlyInViewport: false,
+//     },
+//     on: {
+//       reachEnd: () => {
+//         nextBtn.classList.add('disabled');
+//       },
+//       reachBeginning: () => {
+//         prevBtn.classList.add('disabled');
+//       },
+//       fromEdge: () => {
+//         nextBtn.classList.remove('disabled');
+//         prevBtn.classList.remove('disabled');
+//       }
+//     },
+// });
+// }
+renderReviews()
 
-// Render reviews on button click()
 nextBtn.addEventListener("click", renderReviews);
 
 
