@@ -1,4 +1,4 @@
-<section class="section work-together-section">
+<section class="section work-together-section" id=“workTogether”>
   <!-- <div class="container">
     <h2 class="title work-together-title">let&apos;s work together</h2>
   </div> -->
@@ -72,7 +72,7 @@
             class="work-together-link work-together-link-geo"
             href="https://www.google.com/maps/d/u/1/embed?mid=1A6y2Vi9PGCSIFmsHWKZ5l6-vscg&ll=41.000103800991646%2C-72.72374564843747&z=9>lloydjefferson@gmail.com"
             target="_blank"
-            >
+          >
             <svg class="work-together-adress-icon" width="24" height="24">
               <use href="../img/icons.svg#work-together-gps-icon"></use>
             </svg>
@@ -81,19 +81,54 @@
         </address>
       </div>
       <form action="" class="work-together-form">
+        <div class="work-together-container-input">
         <input
           class="work-together-input work-together-input-email"
-          type="email"
+          type="text"
           placeholder="Your-email*"
         />
+
+        <svg class="work-together-adress-icon-form" width="24" height="24">
+          <use href="../img/icons.svg#work-together-letter-icon"></use>
+        </svg>
+        
+      </div>
         <textarea
           class="work-together-input work-together-input-message"
           name=""
           id=""
           placeholder="Message"
         ></textarea>
+        <p class="work-together-error-message">error</p>
         <button class="work-together-btn" type="submit">SEND MESSAGE</button>
       </form>
     </div>
   </div>
 </section>
+
+<div class="work-together-backdrop">
+  <div class="work-together-modal">
+<button class="work-together-modal-btn-closing" type="button">
+  <svg class="work-together-modal-btn-icin" width="24" height="24">
+    <use href="../img/icons.svg#close-btn-modal-icon"></use>
+  </svg>
+</button>
+
+    <!-- <button class="work-together-modal-btn-closing" type="button">
+      <svg class="work-together-modal-btn-icin" width="24" height="24">
+        <use href="../img/icons.svg#close-btn-modal-icon"></use>
+      </svg>
+    </button> -->
+    <p class="work-together-modal-main">Thank you for your interest in cooperation!</p>
+    <p class="work-together-modal-second">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+

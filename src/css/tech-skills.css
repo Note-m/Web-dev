@@ -18,7 +18,7 @@
   color: #292929;
   overflow: hidden;
   padding: 40px 0px;
-  z-index: 1;
+
   height: 128px;
   background-color: #bcdfd1;
 }
@@ -32,8 +32,9 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-
   gap: 16px;
+  position: relative;
+  z-index: 3;
   padding-left: 0;
   overflow: hidden;
 
@@ -70,8 +71,8 @@
   display: flex;
   gap: 16px;
   background-size: contain;
-  z-index: 2;
-  margin: 0;
+  z-index: 1;
+  margin: 0 -10px;
   background-color: #e4e5e6;
   transform: rotate(2deg);
   justify-content: flex-end;

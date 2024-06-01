@@ -11,11 +11,14 @@
 .hero-container {
     min-width: 320px;
     max-width: 360px;
-    background: url(/src/img/hero/decor-hero-modal-up-mob-1x.png) fixed no-repeat top right ;
+    background: url(../img/background/decor-bg-1.png) no-repeat top;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 40px;
+}
+.hero-img-desk{
+    display: none;
 }
 .hero-title {
     font-family: var(--second-family);
@@ -29,18 +32,17 @@
 .hero-title-accent{
     color: var(--accet-green);
 }
-.hero-button-container {
-    display: flex;
-    align-items: center;
-}
 .hero-button {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     width: 320px;
     height: 92px;
     align-items: center;
     background: transparent;
     border: none;
+}
+.hero-button:hover .hero-button-bg{
+    background: var(--accet-green);
 }
 .hero-button-order {
     font-family: var(--font-family);
@@ -51,31 +53,33 @@
     text-transform: uppercase;
     color: var(--black);
     position: absolute;
-    left: 50%; /* Center the overlapping element horizontally */
-    transform: translateX(-50%); /* Center the element */
-    
+    left: 50%; 
+    transform: translateX(-65%);
     z-index: 1; 
 }
 .hero-button-bg {
-
     box-sizing: border-box;
     width: 165px;
     height: 92px;
     top: 0px;
-    background: rgba(0, 176, 104, 0.2);
+    background: var(--light-accent);
     border: 1px solid #000000;
     border-radius: 16px;
     position: relative;
     
 }
+
+.hero-moto{
+    margin-bottom: 56px;
+}
 .hero-moto-text {
     font-family: var(--font-family);
-font-weight: 400;
-font-size: 18px;
-line-height: 156%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--black);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
 }
 .hero-moto-accent {
     color: var(--accet-green);
@@ -101,3 +105,78 @@ color: var(--black);
     letter-spacing: 0.03em;
     color: var(--black);
 }
+.hero-social-target-link:hover{
+    color: var(--accet-green);
+}
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+    max-width: 768px;
+    background: url(../img/hero/decor-hero-up-tab-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-tab-1x.png) no-repeat bottom;
+    padding-bottom: 64px;
+}
+    .hero-title {
+        font-size: 136px;
+        line-height: 115%;
+        letter-spacing: 0.01em;
+        color: var(--black);
+    }
+    .hero-button {
+        width: 416px;
+        height: 96px;
+    }
+    .hero-button-order{
+        font-size: 20px;
+        line-height: 160%;
+        left: 0; 
+        transform: translateX(50%);
+    }
+    .hero-button-bg {
+        border-radius: 16px;
+        width: 261px;
+        height: 96px;
+        border: none;
+    }
+    .hero-social-list{
+        flex-direction: row;
+        gap: 40px;
+    }
+
+
+    .hero-moto-text {
+       font-size: 20px;
+        line-height: 160%;
+    }
+    .hero-img-desk{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-container {
+    max-width: 1280px;
+    background: url(../img/hero/decor-hero-up-desk-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-desk-1x.png) no-repeat bottom;
+    display: flex;
+    flex-wrap: wrap;
+    }
+   .hero-img-desk{
+    border-radius: 16px;
+    width: 108px;
+    height: 108px;
+    display: inline-flex;
+   }
+  
+   .hero-moto-text{
+    display:;
+   }
+   .hero-button{
+    margin-left: 72px;
+
+   }
+   .hero-button-order{
+        transform: translateX(70%);
+    }
+   
+   
+}
+
