@@ -1,0 +1,98 @@
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Impact", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+    --fs-title-mob: 52px;
+    --flh-title-mob: 64px;
+    --fls-tittle-mob: 1.8px;
+
+	--black: #292929;
+	--accet-green: #00b068;
+	--white: #f0f0f0;
+	--light-grey: #e4e5e6;
+	--light-accent: #bcdfd1;
+
+    --color-black: #292929;
+    --color-green: #00B068;
+    --color-light-grey:#F0F0F0;
+    --color-dark-grey:#E4E5E6;
+    --color-light-blue:#BCDFD1;
+}
+
+.work-together-title {
+    margin-bottom: 40px;
+    font-family: var(--second-family);
+    font-size: var(--fs-title-mob);
+    line-height: var(--flh-title-mob);
+    letter-spacing: var(--fls-tittle-mob);
+    color: var(--color-black);
+    text-transform: uppercase;
+}
+
+.title-work-together-green {
+    color: var(--accet-green)
+}
+
+.work-together-text {
+    margin-bottom: 32px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+
+.work-together-adress {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.work-together-form {
+
+}
+.work-together-link {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+}
+
+.work-together-input-email {
+    margin-bottom: 32px;
+    width:100%;
+    height: 48px;
+}
+
+.work-together-input-message {
+    margin-bottom: 32px;
+    width:100%;
+    height: 128px;
+}
+
+.work-together-btn {
+    border-radius: 8px;
+padding: 12px 24px;
+width: 100%;
+height: 48px;
+background: var(--accet-green);
+border: none;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+text-align: center;
+color: var(--white);
+}
+
+/* font-family: Impact
+font-size: 52 px
+letter-spacing: 1.8 px
+line-height: 64 px */
