@@ -17,6 +17,9 @@
     align-items: stretch;
     gap: 40px;
 }
+.hero-img-desk{
+    display: none;
+}
 .hero-title {
     font-family: var(--second-family);
     font-weight: 400;
@@ -29,18 +32,17 @@
 .hero-title-accent{
     color: var(--accet-green);
 }
-.hero-button-container {
-    display: flex;
-    align-items: center;
-}
 .hero-button {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     width: 320px;
     height: 92px;
     align-items: center;
     background: transparent;
     border: none;
+}
+.hero-button:hover .hero-button-bg{
+    background: var(--accet-green);
 }
 .hero-button-order {
     font-family: var(--font-family);
@@ -60,11 +62,15 @@
     width: 165px;
     height: 92px;
     top: 0px;
-    background: rgba(0, 176, 104, 0.2);
+    background: var(--light-accent);
     border: 1px solid #000000;
     border-radius: 16px;
     position: relative;
     
+}
+
+.hero-moto{
+    margin-bottom: 56px;
 }
 .hero-moto-text {
     font-family: var(--font-family);
@@ -99,6 +105,9 @@
     letter-spacing: 0.03em;
     color: var(--black);
 }
+.hero-social-target-link:hover{
+    color: var(--accet-green);
+}
 
 @media screen and (min-width: 768px) {
     .hero-container {
@@ -132,9 +141,8 @@
         flex-direction: row;
         gap: 40px;
     }
-    .hero-social-target-link{
 
-    }
+
     .hero-moto-text {
        font-size: 20px;
         line-height: 160%;
@@ -148,7 +156,7 @@
     .hero-container {
     max-width: 1280px;
     background: url(../img/hero/decor-hero-up-desk-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-desk-1x.png) no-repeat bottom;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     }
    .hero-img-desk{
@@ -157,21 +165,18 @@
     height: 108px;
     display: inline-flex;
    }
-   .hero-title-accent{
-    display: flex;
-   }
-   .hero-button {
-    display: flex;
-   }
+  
    .hero-moto-text{
     display:;
    }
-   /* .hero-title, .hero-img-desk, .hero-title-accent {
-    flex: 0 0 auto;
-    margin-right: 40px;
-    }
-    .hero-title, .hero-title-accent {
-        white-space: nowrap;
-    } */
+   .hero-button{
+    margin-left: 72px;
 
+   }
+   .hero-button-order{
+        transform: translateX(70%);
+    }
+   
+   
 }
+
