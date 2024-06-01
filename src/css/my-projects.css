@@ -100,3 +100,42 @@
   background: #00b068;
   width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+  .my-projects-title {
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+  .my-projects-name {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .my-projects-item {
+    margin-bottom: 60px;
+  }
+  .my-projects-name-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  .my-projects-btn-load-more {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .projects-img {
+    width: 100%;
+  }
+  .my-projects-title {
+    margin-bottom: 80px;
+  }
+  .my-projects-item {
+    margin-bottom: 80px;
+  }
+}
