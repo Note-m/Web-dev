@@ -99,3 +99,56 @@
     letter-spacing: 0.03em;
     color: var(--black);
 }
+
+@media screen and (min-width: 768px) {
+    .hero-container {
+    max-width: 768px;
+    background: url(../img/hero/decor-hero-up-tab-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-tab-1x.png) no-repeat bottom;
+    padding-bottom: 64px;
+}
+    .hero-title {
+        font-size: 136px;
+        line-height: 115%;
+        letter-spacing: 0.01em;
+        color: var(--black);
+    }
+    .hero-button {
+        width: 416px;
+        height: 96px;
+    }
+    .hero-button-order{
+        font-size: 20px;
+        line-height: 160%;
+        left: 0; 
+        transform: translateX(50%);
+    }
+    .hero-button-bg {
+        border-radius: 16px;
+        width: 261px;
+        height: 96px;
+        border: none;
+    }
+    .hero-social-list{
+        flex-direction: row;
+        gap: 40px;
+    }
+    .hero-social-target-link{
+
+    }
+    .hero-moto-text {
+       font-size: 20px;
+        line-height: 160%;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+    .hero-container {
+    max-width: 1280px;
+    background: url(../img/hero/decor-hero-up-desk-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-desk-1x.png) no-repeat bottom;
+}
+    
+}
