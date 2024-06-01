@@ -31,7 +31,7 @@
   justify-content: space-between;
   cursor: pointer;
   border-radius: 16px;
-  padding: 28px 16px 24px 24px;
+  padding: 28px 24px 24px 24px;
 }
 
 .accordion-title span {
@@ -42,6 +42,7 @@
   border-radius: 100px;
   width: 30px;
   height: 30px;
+  align-self: flex-start;
 }
 
 .accordion-title span svg {
@@ -110,8 +111,8 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
   }
-  .accordion-title {
-    padding-right: 56px;
+  .accordion-list-title {
+    padding-right: 32px;
   }
 }
 
