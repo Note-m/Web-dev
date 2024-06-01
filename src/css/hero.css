@@ -51,13 +51,11 @@
     text-transform: uppercase;
     color: var(--black);
     position: absolute;
-    left: 50%; /* Center the overlapping element horizontally */
-    transform: translateX(-50%); /* Center the element */
-    
+    left: 50%; 
+    transform: translateX(-68%);
     z-index: 1; 
 }
 .hero-button-bg {
-
     box-sizing: border-box;
     width: 165px;
     height: 92px;
@@ -70,12 +68,12 @@
 }
 .hero-moto-text {
     font-family: var(--font-family);
-font-weight: 400;
-font-size: 18px;
-line-height: 156%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--black);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
 }
 .hero-moto-accent {
     color: var(--accet-green);
