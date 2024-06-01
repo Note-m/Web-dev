@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.marquee {
+  display: flex;
+  margin: 0;
+  gap: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  overflow: hidden;
+  padding: 40px 0px;
+  z-index: 1;
+  height: 128px;
+  background-color: #bcdfd1;
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  padding-left: 0;
+  overflow: hidden;
+  align-items: baseline;
+  margin: 0;
+  padding: 10px 15px;
+  min-width: 100%;
+  max-width: max-content;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee__line li {
+  flex: 1;
+}
+.marqueet {
+  background-size: contain;
+  z-index: 2;
+  margin: 0;
+  background-color: #e4e5e6;
+  transform: rotate(2deg);
+  justify-content: flex-end;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+.tech-skills-title {
+  display: none;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
