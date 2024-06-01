@@ -52,7 +52,7 @@
     color: var(--black);
     position: absolute;
     left: 50%; 
-    transform: translateX(-68%);
+    transform: translateX(-65%);
     z-index: 1; 
 }
 .hero-button-bg {
