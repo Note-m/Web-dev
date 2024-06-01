@@ -16,10 +16,10 @@
   margin-bottom: 40px;
 }
 .user-review{
-  /* display: flex; */
   padding: 32px;
   background-color: #E4E5E6;
   border-radius: 16px;
+  width: 100%;
 }
 .text-review{
     font-family: "Poppins", sans-serif;
@@ -65,7 +65,10 @@
   background-color:lightgray;
   transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.not-found{
+  display: flex;
+  justify-content: center;
+}
 /* .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -97,7 +100,6 @@
   .swiper-wrapper {
       max-width: 1240px;
     }
-
   .is-hidden {
       opacity: 1;
       visibility: visible;
@@ -110,4 +112,10 @@
   .reviews-title {
     margin-bottom: 80px;
   }
+    .btn-prev,
+    .btn-next {
+      width: 48px;
+      height: 48px;
+     
+    }
 }
