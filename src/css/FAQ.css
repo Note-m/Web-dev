@@ -1,0 +1,143 @@
+.section-faq {
+  margin-top: 40px;
+}
+
+.faq-title {
+  font-family: Impact, sans-serif;
+  text-transform: uppercase;
+  font-size: 52px;
+  letter-spacing: 0.03em;
+  line-height: 1.23077;
+  color: #292929;
+  margin-bottom: 40px;
+}
+
+.faq-title span {
+  color: #00b068;
+}
+
+.faq-image {
+  display: none;
+}
+
+.accordion {
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.accordion-list {
+  display: block;
+  width: 320px;
+  margin-bottom: 40px;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 28px 24px 24px 24px;
+}
+
+.accordion-title span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+}
+
+.accordion-title span svg {
+  fill: black;
+}
+
+.accordion-block.active {
+  background-color: rgba(0, 176, 104, 0.2);
+  border-radius: 16px;
+}
+
+.accordion-list-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.accordion-content {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  overflow: hidden;
+  max-height: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
+  padding: 0 24px;
+}
+
+.accordion-content.active {
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+
+.accordion-title span svg {
+  transition: transform 0.5s ease;
+}
+
+.accordion-title.active span svg {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 374.98px) {
+  .accordion-list {
+    width: 100%;
+  }
+
+  .accordion-title {
+    padding: 20px;
+  }
+
+  .accordion-content {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .faq-title {
+    width: 592px;
+    font-size: 108px;
+    line-height: 1.14815;
+    letter-spacing: 0.02em;
+  }
+
+  .accordion-list {
+    width: 592px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .faq-image {
+    display: block;
+    position: absolute;
+    width: 526px;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  .accordion-list {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+  }
+}
