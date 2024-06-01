@@ -1,1 +1,103 @@
+:root {
+	--black: #292929;
+	--accet-green: #00b068;
+	--white: #f0f0f0;
+	--light-grey: #e4e5e6;
+	--light-accent: #bcdfd1;
+  --font-family: "Poppins", sans-serif;
+  --second-family: "Impact", sans-serif;
+  --third-family: "Montserrat", sans-serif;
+}
+.hero-container {
+    min-width: 320px;
+    max-width: 360px;
+    background: url(/src/img/hero/decor-hero-modal-up-mob-1x.png) fixed no-repeat top right ;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+}
+.hero-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.hero-title-accent{
+    color: var(--accet-green);
+}
+.hero-button-container {
+    display: flex;
+    align-items: center;
+}
+.hero-button {
+    display: flex;
+    width: 320px;
+    height: 92px;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+.hero-button-order {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    position: relative;
+    position: absolute;
+    left: 50%; /* Center the overlapping element horizontally */
+    transform: translateX(-50%); /* Center the element */
+    padding: 0 5px; /* Optional: add some padding to the overlapping element */
+    z-index: 1; 
+}
+.hero-button-bg {
+    
+    box-sizing: border-box;
+    width: 165px;
+    height: 92px;
+    top: 0px;
+    background: rgba(0, 176, 104, 0.2);
+    border: 1px solid #000000;
+    border-radius: 16px;
+    position: relative;
+    
+}
+.hero-moto-text {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+line-height: 156%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--black);
+}
+.hero-moto-accent {
+    color: var(--accet-green);
+}
+.hero-button-arrow { 
+    fill: var(--accet-green);
+}
+.hero-social-list {
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 24px;
 
+}
+.hero-social-target-link {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+}
