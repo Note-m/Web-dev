@@ -10,24 +10,27 @@ const nextBtn = document.querySelector(".swiper-button-prev")
 const prevBtn = document.querySelector(".swiper-button-next")
 const galleryReviews = document.querySelector(".reviews-list")
 
+const fetchReviews = () => {
+  return swagger.get("/reviews")
+}
 
-const fetchReviews = async () => {
-  try {
-    const response = await fetch(`${BASE_URL}/reviews`)
-    if (!response.ok) {
-      throw new Error("Network error")
-    }
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error("Failed fetching", error)
-    iziToast.error({
-      message: "Sorry, failed fetching reviews. Please try again later.",
-      timeout: 2000,
-    });
-    return [];
-  }
-};
+// const fetchReviews = async () => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/reviews`)
+//     if (!response.ok) {
+//       throw new Error("Network error")
+//     }
+//     const data = await response.json()
+//     return data
+//   } catch (error) {
+//     console.error("Failed fetching", error)
+//     iziToast.error({
+//       message: "Sorry, failed fetching reviews. Please try again later.",
+//       timeout: 2000,
+//     });
+//     return [];
+//   }
+// };
 
 const markup = reviews => {
   return reviews.map(
@@ -48,13 +51,18 @@ const markup = reviews => {
   ).join("")
 };
 
-const createReviews = async () => {
-  const reviews = await fetchReviews()
-  if (reviews.length === 0) {
-    galleryReviews.innerHTML = "<p class='not-found'>Not found</p>"
+async function renderReviews(event) {
+  try {
+    const reviews = await fetchReviews() 
+    if (reviews.length === 0) {
+      galleryReviews.innerHTML = "<p class='not-found'>Not found</p>"
+      return
   } else {
     galleryReviews.innerHTML = markup(reviews)
     initSwiper()
+  }
+  } catch (error) {
+    console.log(error)
   }
 }
 
@@ -87,13 +95,26 @@ const initSwiper = () => {
     },
 });
 }
-createReviews()
 
-// nextBtn.addEventListener("click", () => {
-  
-// })
 
-// prevBtnBtn.addEventListener("click", () => {
-  
-// })
-// return swagger.get("api/", {})
+nextBtn.addEventListener("click", renderReviews)
+
+
+
+// const fetchReviews = async () => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/reviews`)
+//     if (!response.ok) {
+//       throw new Error("Network error")
+//     }
+//     const data = await response.json()
+//     return data
+//   } catch (error) {
+//     console.error("Failed fetching", error)
+//     iziToast.error({
+//       message: "Sorry, failed fetching reviews. Please try again later.",
+//       timeout: 2000,
+//     });
+//     return [];
+//   }
+// };
