@@ -72,8 +72,10 @@ const swiper = new Swiper(".swiper-container", {
   },
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
+  simulateTouch: true,
+  allowTouchMove: true,
   on: {
     slideChange: () => {
       const currentIndex = swiper.activeIndex;
@@ -82,7 +84,7 @@ const swiper = new Swiper(".swiper-container", {
       } else {
         disabledBtn(prevBtn, false);
       }
-      if (currentIndex === reviews.length - 1) {
+      if (currentIndex === reviews.length + 1) {
         disabledBtn(nextBtn, true);
         iziToast.info({
           title: 'Info',
@@ -93,6 +95,12 @@ const swiper = new Swiper(".swiper-container", {
       } else {
         disabledBtn(nextBtn, false);
       }
+    },
+  },
+   breakpoints: {
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 32
     },
   },
 });
