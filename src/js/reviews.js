@@ -5,12 +5,12 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api';
 
-const prevBtn = document.querySelector('.btn-prev');
-const nextBtn = document.querySelector('.btn-next');
-const galleryReviews = document.querySelector('.reviews-list');
-nextBtn.disabled = false;
-prevBtn.disabled = true;
+const galleryReviews = document.querySelector(".swiper-wrapper");
+const prevBtn = document.querySelector(".btn-prev");
+const nextBtn = document.querySelector(".btn-next");
+const icon = document.querySelector(".icon-swipe")
 
+let reviews;
 
 const fetchReviews = async () => {
   try {
@@ -19,7 +19,6 @@ const fetchReviews = async () => {
       throw new Error('Failed to fetch reviews');
     }
     const data = await response.json();
-    // console.log(data);
     return data;
   } catch (error) {
     iziToast.error({
@@ -32,9 +31,9 @@ const fetchReviews = async () => {
 };
 
 const markup = review => {
-  const { author, avatar_url, review: reviewText } = review;
-  return `
-    <li class="user-review">
+  return review.map(  
+  ({ author, avatar_url, review: reviewText }) =>  `
+    <li class="swiper-slide user-review">
       <p class="text-review">${reviewText}</p>
       <div class="icon-photo-name">
         <img
@@ -43,57 +42,67 @@ const markup = review => {
           width="40"
           height="40"
           class="avatar-icon"
-
         />
         <p class="user-name-review">${author}</p>
       </div>
-    </li>`;
+    </li>`
+  ).join("")
 };
 
-let reviews = [];
-let currentIndex = 0;
-
-async function renderNextReview(event) {
-  event.preventDefault();
+const initReviews = async () => {
   try {
-    reviews = await fetchReviews();
-    if (reviews.length === 0) {
-      galleryReviews.innerHTML = "<p class='not-found'>Not found</p>";
-      return;
-    } else if (currentIndex < reviews.length - 1) {
-      currentIndex++;
-      galleryReviews.innerHTML = markup(reviews[currentIndex]);
-      prevBtn.disabled = false;
-    } else {
-    iziToast.info({
-      title: 'Info',
-      message: 'Sorry, no more reviews for now.',
-      position: 'topRight',
-      color: 'green'
-    });
-    nextBtn.disabled = true;
-  }
-  }
-  catch (error) {
+   reviews = await fetchReviews();
+    galleryReviews.innerHTML += markup(reviews);
+    swiper.update();
+  } catch (error) {
     console.log(error);
     galleryReviews.innerHTML = "<p class='not-found'>Not found</p>";
+    disabledBtn(prevBtn, true);
+    disabledBtn(nextBtn, true);
   }
-}
+};
 
-async function renderPrevReview(event) {
-  event.preventDefault();
-  try {
-    reviews = await fetchReviews();
-   if (currentIndex <= reviews.length - 1) {
-      currentIndex--;
-      galleryReviews.innerHTML = markup(reviews[currentIndex]);
-      prevBtn.disabled = false;
-    }
-  }
-  catch (error) {
-    console.log(error);
-  }
-}
+const swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  on: {
+    slideChange: () => {
+      const currentIndex = swiper.activeIndex;
+      disabledBtn(prevBtn, currentIndex === 0);
+      if (currentIndex === reviews.length + 1) {
+        disabledBtn(nextBtn, currentIndex === reviews.length + 1); 
+        iziToast.info({
+          title: 'Info',
+          message: 'Sorry, no more reviews for now.',
+          position: 'topRight',
+          color: 'green'
+        });
+      } 
+    },
+  },
+});
 
-nextBtn.addEventListener('click', renderNextReview);
-prevBtn.addEventListener('click', renderPrevReview);
+const disabledBtn = (button, isDisabled) => {
+  button.disabled = isDisabled 
+  if (isDisabled) {
+    button.style.backgroundColor = "grey";
+    button.style.cursor = "not-allowed";
+    icon.style.stroke = "grey"
+  } else {
+    button.style.backgroundColor = '';
+    button.style.cursor = '';
+    icon.style.stroke = "#292929";
+  }
+} 
+
+prevBtn.addEventListener('click', () => {
+  swiper.slidePrev();
+});
+
+nextBtn.addEventListener('click', () => {
+  swiper.slideNext();
+});
+
+initReviews();
