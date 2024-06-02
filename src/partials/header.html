@@ -8,39 +8,41 @@
         <div class="switch-btn">
         </div>
         <li class="header-nav-item">
-          <a class="header-nav-link" href="#about">About me</a>
+          <a class="header-nav-link" href="./about-me.html">About me</a>
         </li>
         <li class="header-nav-item">
-          <a class="header-nav-link" href="#projects">Projects</a>
+          <a class="header-nav-link" href="./my-projects.html">Projects</a>
         </li>
         <li class="header-nav-item">
-          <a class="header-nav-link" href="#contacts">Contacts</a>
+          <a class="header-nav-link" href="./footer.html">Contacts</a>
         </li>
       </ul>
     </nav>
-    <button type="button" data-menu-open class="burger-menu js-open-menu">
+    <button type="button" data-modal-open class="burger-menu js-open-menu">
       <svg class="burger-icon" width="21" height="14">
         <use href="/src/img/icons.svg#header-burger-icon"></use>
       </svg>
     </button>
-    <button type="button" class="modal-close js-close-menu" data-menu-close>
-      <svg class="modal-close-icon" width="8" height="8">
-        <use href="./images/icons.svg#icon-close"></use>
+    <button type="button" class="modal-close js-close-menu" data-modal-close>
+      <svg class="modal-close-icon" width="20" height="20">
+        <use href="/src/img/icons.svg#close-btn-modal-icon"></use>
       </svg>
     </button>
   </div>
 </header>
-<div id="mobile-menu" class="menu-container js-menu-container" data-menu >
-  <ul class="mob-menu-list">
-    <li class="mob-menu-item">
-      <a class="mob-menu-link" href="#about">About me</a>
-    </li>
-    <li class="mob-menu-item">
-      <a class="mob-menu-link" href="#projects">Projects</a>
-    </li>
-    <li class="mob-menu-item">
-      <a class="mob-menu-link" href="#contacts">Contacts</a>
-    </li>
-  </ul>
+<div class="backdrop is-hidden" data-modal>
+  <div id="mobile-menu" class="menu-container js-menu-container"  >
+    <ul class="mob-menu-list">
+      <li class="mob-menu-item">
+        <a class="mob-menu-link" href="#about">About me</a>
+      </li>
+      <li class="mob-menu-item">
+        <a class="mob-menu-link" href="#projects">Projects</a>
+      </li>
+      <li class="mob-menu-item">
+        <a class="mob-menu-link" href="#contacts">Contacts</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
