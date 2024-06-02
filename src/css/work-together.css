@@ -18,6 +18,9 @@
 
 }
 
+
+
+
 .work-together-title {
     margin-bottom: 40px;
     font-family: var(--second-family);
@@ -126,6 +129,12 @@
     opacity: 0;
     visibility: hidden;
 }
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .work-together-input:focus-within {
     border: none;
     outline:none;
@@ -180,7 +189,7 @@
     background-color: rgba(46, 47, 66, 0.40);
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -191,7 +200,7 @@
     z-index: 1;
     opacity: 1;
     visibility:visible;
-    z-index: 1;
+  
 
 }
 
@@ -251,16 +260,32 @@
 @media screen and (min-width: 768px) {
 
     .work-together-container {
+        background-image: url(../img/lets-work/decor\ lets-work-tab-1x.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: auto;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .work-together-container {
+      background-image: url(../img/lets-work/decor-lets-work-tab-2x.png);
+    }
+  }
+
+    .work-together-container {
         position:relative;
     }
 
-    .work-together-picture {
+    /* .work-together-picture {
         position: absolute;
         top: -25%;
         right:0;
         display: block;
        
-    }
+    } */
 
     .work-together-title {
         margin-bottom: 60px;
@@ -297,6 +322,22 @@
   }
 
   @media screen and (min-width: 1280px) {
+
+    .work-together-container {
+        background-image: url(../img/lets-work/decor-lets-work-desk-1x.png);
+        background-repeat: no-repeat;
+        background-position: top -200px right;
+        /* background-size:auto; */
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .work-together-container {
+      background-image: url(../img/lets-work/decor-lets-work-desk-2x.png);
+    }
+  }
     .work-together-title {
         margin-bottom: 80px;
         width: 507px
