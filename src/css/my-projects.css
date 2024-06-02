@@ -26,6 +26,7 @@
   letter-spacing: 0.03em;
   color: #292929;
   margin-bottom: 16px;
+  margin-top: 12px;
 }
 
 .my-projects-name {
@@ -52,7 +53,8 @@
   width: 125px;
   height: 48px;
   background: #e4e5e6;
-  display: block;
+  display: flex;
+  gap: 12px;
   margin-left: auto;
   transition-property: background;
   transition-duration: 250ms;
@@ -101,6 +103,16 @@
   width: 100%;
 }
 
+.my-projects-btn-icon {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.my-projects-icon use {
+  margin-left: 12px;
+}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -113,6 +125,10 @@
     line-height: 1.14815;
     letter-spacing: 0.02em;
     margin-bottom: 60px;
+  }
+
+  .my-projects-text {
+    margin-top: 16px;
   }
 
   .my-projects-name {
