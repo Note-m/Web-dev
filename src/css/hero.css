@@ -53,8 +53,7 @@
     text-transform: uppercase;
     color: var(--black);
     position: absolute;
-    left: 50%; 
-    transform: translateX(-65%);
+    margin-left: 40px;
     z-index: 1; 
 }
 .hero-button-bg {
@@ -128,8 +127,7 @@
     .hero-button-order{
         font-size: 20px;
         line-height: 160%;
-        left: 0; 
-        transform: translateX(50%);
+    
     }
     .hero-button-bg {
         border-radius: 16px;
@@ -173,9 +171,7 @@
     margin-left: 72px;
 
    }
-   .hero-button-order{
-        transform: translateX(70%);
-    }
+  
    
    
 }
