@@ -12,7 +12,6 @@ nextBtn.disabled = false;
 prevBtn.disabled = true;
 
 
-
 const fetchReviews = async () => {
   try {
     const response = await fetch(`${BASE_URL}/reviews`);
@@ -70,6 +69,7 @@ async function renderNextReview(event) {
       title: 'Info',
       message: 'Sorry, no more reviews for now.',
       position: 'topRight',
+      color: 'green'
     });
     nextBtn.disabled = true;
   }
