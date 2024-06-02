@@ -157,7 +157,7 @@
     right: 32px;
     width: 526px;
     height: 408px;
-    background: url('./img/benefits/decor-benefits-desk-1x.png') no-repeat center center;
+    background: url('../img/benefits/decor-benefits-desk-1x.png') no-repeat center center;
     background-size: cover;
     z-index: -1;
   }
@@ -172,7 +172,7 @@
       right: 32px;
       width: 526px;
       height: 408px;
-      background: url('./img/benefits/decor-benefits-desk-2x.png') no-repeat center center;
+      background: url('../img/benefits/decor-benefits-desk-2x.png') no-repeat center center;
       background-size: cover;
       z-index: -1;
     }
