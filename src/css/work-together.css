@@ -271,7 +271,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .work-together-container {
-      background-image: url(../img/lets-work/decor-lets-work-tab-2x.png);
+      background-image: url(./img/lets-work/decor-lets-work-tab-2x.png);
     }
   }
 
@@ -335,7 +335,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .work-together-container {
-      background-image: url(../img/lets-work/decor-lets-work-desk-2x.png);
+      background-image: url(./img/lets-work/decor-lets-work-desk-2x.png);
     }
   }
     .work-together-title {
