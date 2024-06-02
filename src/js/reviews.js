@@ -10,6 +10,7 @@ const prevBtn = document.querySelector(".btn-prev");
 const nextBtn = document.querySelector(".btn-next");
 const icon = document.querySelector(".icon-swipe")
 
+
 let reviews;
 
 const fetchReviews = async () => {
@@ -51,9 +52,11 @@ const markup = review => {
 
 const initReviews = async () => {
   try {
-   reviews = await fetchReviews();
+    reviews = await fetchReviews();
+    if (reviews.length > 0) {
     galleryReviews.innerHTML += markup(reviews);
     swiper.update();
+    }
   } catch (error) {
     console.log(error);
     galleryReviews.innerHTML = "<p class='not-found'>Not found</p>";
@@ -62,15 +65,19 @@ const initReviews = async () => {
   }
 };
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper(".swiper-container", {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   on: {
     slideChange: () => {
       const currentIndex = swiper.activeIndex;
-      disabledBtn(prevBtn, currentIndex === 0);
+      if (currentIndex === 0) {
+        disabledBtn(prevBtn, currentIndex === 0);
+      } else {
+        disabledBtn(prevBtn, false);
+      }
       if (currentIndex === reviews.length + 1) {
         disabledBtn(nextBtn, currentIndex === reviews.length + 1); 
         iziToast.info({
@@ -79,11 +86,12 @@ const swiper = new Swiper('.swiper-container', {
           position: 'topRight',
           color: 'green'
         });
-      } 
+      } else {
+        disabledBtn(nextBtn, false)
+      }
     },
   },
 });
-
 const disabledBtn = (button, isDisabled) => {
   button.disabled = isDisabled 
   if (isDisabled) {
@@ -96,6 +104,7 @@ const disabledBtn = (button, isDisabled) => {
     icon.style.stroke = "#292929";
   }
 } 
+disabledBtn(prevBtn, true);
 
 prevBtn.addEventListener('click', () => {
   swiper.slidePrev();
