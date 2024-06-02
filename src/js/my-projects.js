@@ -46,9 +46,15 @@ const projects = [
 const projectsListEl = document.querySelector('.my-projects-list');
 const loadMoreBtnEl = document.querySelector('.my-projects-btn-load-more');
 
-const createMarkup = projects
-  .map(
-    project => `
+let index = 0;
+let count = 3;
+
+export const loadMoreProjects = event => {
+  if (index < projects.length) {
+    const elements = projects.slice(index, index + count);
+    const createMarkup = elements
+      .map(
+        project => `
        <li class="my-projects-item">
         <picture>
           <source
@@ -93,15 +99,15 @@ const createMarkup = projects
             </svg></a>
         </div>
       </li>`
-  )
-  .join('');
-
-export const loadMoreProjects = event => {
-  projectsListEl.insertAdjacentHTML('beforeend', createMarkup);
+      )
+      .join('');
+    projectsListEl.insertAdjacentHTML('beforeend', createMarkup);
+    index += count;
+    loadMoreBtnEl.style.color = '#292929';
+  }
+  if (index >= projects.length) {
+    loadMoreBtnEl.classList.add('is-hidden');
+  }
 };
 
 loadMoreBtnEl.addEventListener('click', loadMoreProjects);
-
-// for (let index = 0; index < array.length; index++) {
-//   const element = array[index];
-// }
