@@ -66,6 +66,7 @@
     border: 1px solid #000000;
     border-radius: 16px;
     position: relative;
+    z-index: -1;
     
 }
 
@@ -121,7 +122,11 @@
 @media screen and (min-width: 768px) {
     .hero-container {
     max-width: 768px;
-    background: url(../img/hero/decor-hero-up-tab-1x.png) no-repeat top right, url(../img/hero/decor-hero-down-tab-1x.png) no-repeat bottom;
+    background-image: 
+    url(../img/hero/decor-hero-up-tab-1x.png), 
+    url(../img/hero/decor-hero-down-tab-1x.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position:right 32px top 16px, left 184px bottom 102px;
     padding-bottom: 64px;
 }
     .hero-title {
