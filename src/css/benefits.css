@@ -150,6 +150,21 @@
     grid-row: 2;
   }
 
+  .bnf-cont::before {
+    content: '';
+    position: absolute;
+    top: -148px;
+    right: 32px;
+    width: 526px;
+    height: 408px;
+    background: url('../img/benefits/decor-benefits-desk-1x.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
     .bnf-cont::before {
       content: '';
       position: absolute;
@@ -157,8 +172,9 @@
       right: 32px;
       width: 526px;
       height: 408px;
-      background: url('') no-repeat center center;
+      background: url('../img/benefits/decor-benefits-desk-2x.png') no-repeat center center;
       background-size: cover;
       z-index: -1;
     }
+  }
 }
