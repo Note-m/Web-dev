@@ -40,7 +40,8 @@ export function manageModal () {
                     }
                     return response.json();
                   })
-                  .then(post => {console.log(post)
+                  .then(post => {
+                    // console.log(post)
                     // workTogetherModalTitle.textContent = post.title
                     // workTogetherModalText.textContent = post.message
                     workTogetherModal.classList.add("active")
@@ -52,7 +53,8 @@ export function manageModal () {
                         message: 'Sorry, something went wromg, please check your request once more.',
                         position: 'topRight',
                       });
-                      console.log(error)});
+                      // console.log(error)
+                    });
 
                 // workTogetherModal.classList.add("active")
                 

@@ -1,17 +1,25 @@
-.about-me-container {
+.section-about-me {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+    align-items: center;
+
 }
+
 .about-me-title {
-    
-    margin: 0;
-    
-    width: 217px;
-    height: 64px;
-   margin-left: 20px;
-    
+
+    font-family: 'Impact', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.23077;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #292929;
+    /* margin-bottom: 40px;*/
+    text-align: center;
+
 }
+
 .about-me-img {
     width: 320px;
     height: 374px;
@@ -20,19 +28,21 @@
     margin-left: 20px;
     margin-bottom: 0px;
 }
+
 .about {
     color: #292929;
-    
+
 }
 
 .me {
     color: #00B068;
-    
+
 }
 
 .bio-section {
     padding: 20px;
     text-align: center;
+
 }
 
 .bio-section img {
@@ -44,70 +54,163 @@
 
 .bio {
     text-align: left;
+
 }
 
-.bio-title {
-    
-    
-    font-size: 18px;
-    display: inline-block;
+.title-name {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #292929;
+    margin-bottom: 16px;
 }
 
-.bio-text {
-    font-size: 14px;
-    line-height: 1.6;
-    
-    width: 320px;
-    
+.bio-text .row-list {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+    margin-bottom: 16px;
 }
 
 .bio-title+.bio-text {
     margin-top: 32px;
-    
+
 }
+
 .bio p {
     margin-bottom: 24px;
 }
 
 .bio p:last-child {
     margin-bottom: 0;
-    
+
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+}
+
+ul li::before {
+    content: '•';
+    color: #00B068;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: left;
+}*/
+
+
 @media (min-width: 768px) {
-    .about-me-container {
+    .section-about-me {
+        background-image: url(../img/about-me/decor-about-me-tab-1x.png);
         max-width: 768px;
         position: relative;
     }
 
-        
+    .about-me-title {
+        text-align: left;
+        font-size: 108px;
+        line-height: 124px;
+        letter-spacing: 0.01em;
+    }
+
+
+    .about-me-img {
+
+        max-width: 336px;
+        max-height: 392px;
+        margin-top: 1px;
+
+    }
+
+
 
     .bio-section {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+
     }
+
     .bio-text {
         max-width: 336px;
     }
-        }
 
-                @media (min-width: 768px) {
-                    
-                    .bio {
-                        background-image: url(../img/about-me/decor-about-me-tab-1x.png);
-                        background-size: ;
-                    }
-                    .about-me-img {
-                        width: 336px;
-                        height: 392px;
-                        margin-top: 408px;
-                    }
-                }
-                 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    .bottom-row {
+        display: flex;
+        margin-top: 140px;
+
+    }
+
+    .EDUCATION {
+        max-width: 336px;
+        margin-right: 32px;
+    }
+
+}
+
+
+/* @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
                         (min-width: 768px) and (min-resolution: 192dpi) {
-                        .bio {
+                        .section-about-me {
                          background-image: url(../img/about-me/decor-about-me-tab-2x.png);
                                     }
-                                }
+                                }*/
+@media (min-width: 1280px) {
+    .section-about-me {
+        background-image: url(../img/about-me/decor-aboutme-desk-1x.png);
+        max-width: 1280px;
+        position: relative;
+    }
+
+    .bio-section {}
+
+    .about-me-img {}
+
+    .about-me-img img {
+        min-width: 384px;
+        /*  */
+        min-height: 448px;
+        margin-left: 208px;
+        margin-top: 0;
+        /*  */
+    }
+
+    .bio {}
+
+    .bio-text {
+        min-width: 488px;
+    }
+
+    .bottom-row {
+
+        display: flex;
+        justify-content: center;
+        gap: 136px;
+
+
+    }
+
+    .education,
+    .role {}
+}
