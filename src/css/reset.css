@@ -29,7 +29,9 @@
   --light-green-color: #bcdfd1;
   --light-gray-color: #e4e5e6;
 }
-
+body {
+  background-color: #f0f0f0;
+}
 h1,
 h2,
 h3,
