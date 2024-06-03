@@ -1,4 +1,3 @@
-
 body {
     background-color: white; 
     transition: background-color 300ms;
@@ -7,6 +6,11 @@ body {
     background-color: var(--main-black-color);
     color:  var(--light-gray-color);
 }
+
+.no-scroll{
+  overflow: hidden;  
+}
+
 .header-container {
     padding: 36px 20px;
     max-width: 100%;
@@ -82,14 +86,15 @@ color: var(--black);
     position: fixed;
     z-index: 999;
     top: 64px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--light-gray-color);
-    transition: transform 250ms ease-in-out;
+    transition: opacity 300ms linear, visibility 300ms linear;
+    
 }
 
-.backdrop.is-hidden.menu-container {
-    transform: translate(-50%, -50%) scale(0);
+.backdrop.is-hidden .menu-container {
+    transform: translate(auto) scale(0);
 }
 
 .menu-container {
@@ -99,9 +104,9 @@ color: var(--black);
     background: url("/src/img/hero/decor-hero-modal-up-mob-1x.png");
     background-repeat: no-repeat;
     top: 64px;
-    /* transform: translate(auto) scale(1); */
-    transition: transform 300ms linear;
+    
     transform: translateX(auto) scale(1);
+    transition: transform 300ms linear;
   }
 
 .mob-menu-list {
