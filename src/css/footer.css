@@ -14,6 +14,8 @@
 
 }
 
+ul.footer-list-socials .footer-item-social {list-style: none;}
+
 .section-footer {
     padding-top: 80px;
     padding-bottom: 24px;
