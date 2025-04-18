@@ -74,6 +74,7 @@ const swiper = new Swiper(".swiper-container", {
     enabled: true,
     onlyInViewport: true,
   },
+  autoHeight: true,
   simulateTouch: true,
   allowTouchMove: true,
   on: {
